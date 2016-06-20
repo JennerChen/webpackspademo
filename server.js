@@ -27,7 +27,8 @@ new WebpackDevServer(webpack(config),{
 				}
 			}
 		}
-	}
+	},
+	stats: { colors: true }
 }).listen(13777,'127.0.0.1',function(err){
 	if(err){
 		console.log(err);

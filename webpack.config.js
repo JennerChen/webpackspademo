@@ -47,7 +47,6 @@ module.exports = {
         "jquery":"jQuery"
     },
     plugins:[
-//	    new webpack.HotModuleReplacementPlugin()
         new webpack.HotModuleReplacementPlugin(),//热替换模块
         new webpack.NoErrorsPlugin()//当新的更改报错时, 不生产新的代码
     ]
