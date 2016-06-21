@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
-    "start": "webpack-dev-server",
+    "dev_old": "webpack-dev-server --inline --hot",
+    "dev": "node server.js",
+    "production": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ZHANG QING",
@@ -18,6 +19,7 @@
     "bundle-loader": "^0.5.4",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",

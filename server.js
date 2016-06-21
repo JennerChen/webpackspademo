@@ -4,7 +4,9 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config.js');
-config.entry.unshift("webpack-dev-server/client?http://127.0.0.1:13777/"
+var serverAddress = "127.0.0.1";
+var serverPort = "1377";
+config.entry.unshift("webpack-dev-server/client?http://"+serverAddress+":"+serverPort+"/"
 	, "webpack/hot/dev-server"
 );
 new WebpackDevServer(webpack(config),{
@@ -29,9 +31,9 @@ new WebpackDevServer(webpack(config),{
 		}
 	},
 	stats: { colors: true }
-}).listen(13777,'127.0.0.1',function(err){
+}).listen(serverPort,serverAddress,function(err){
 	if(err){
 		console.log(err);
 	}
-	console.log('listening at 127.0.0.1:13777');
+	console.log('listening at %s',serverAddress+":"+serverPort);
 });
