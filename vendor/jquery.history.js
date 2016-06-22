@@ -508,7 +508,7 @@ if (typeof JSON !== 'object') {
 	History.Adapter = {
 		/**
 		 * History.Adapter.bind(el,event,callback)
-		 * @param {Element|string} el
+		 * @param {Element|string|Window} el
 		 * @param {string} event - custom and standard events
 		 * @param {function} callback
 		 * @return {void}

@@ -31,18 +31,18 @@ module.exports = {
                 }
             }, {
                 test: [/\.html$/, /\.htm$/],
-                loader: 'html-loader',
+                loader: 'html-loader'
             }, {
                 test: [/\.json$/],
                 loader: 'json-loader'
             }, {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader"),
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
                 // 'style-loader!css-loader!less-loader'
             }, // use ! to chain loaders
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
                 // 'style-loader!css-loader'
             }, {
                 test: /\.(png|jpg)$/,
