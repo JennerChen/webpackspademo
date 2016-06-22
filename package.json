@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "repository":"https://github.com/JennerChen/webpackspademo.git",
+  "repository": "https://github.com/JennerChen/webpackspademo.git",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
     "start": "webpack-dev-server",
-    "prod":"webpack -p",
+    "prod": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ZHANG QING",
@@ -19,6 +19,7 @@
     "babel-preset-react": "^6.5.0",
     "bundle-loader": "^0.5.4",
     "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
     "json-loader": "^0.5.4",

@@ -1,5 +1,4 @@
 require("./style.less");
-require("./a.js");
 function changePage(){
 	var currentState = History.getState();
    

@@ -1,4 +1,6 @@
 var webpack = require('webpack');
+// 该插件将webpack不会将css直接插入页面中,而是提取到设定的css文件中
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require('path');
 // var buildPath = path.resolve(__dirname, 'src/www');
 // definePlugin takes raw strings and inserts them, so you can put strings of JS if you want.
@@ -35,11 +37,13 @@ module.exports = {
                 loader: 'json-loader'
             }, {
                 test: /\.less$/,
-                loader: 'style-loader!css-loader!less-loader'
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader"),
+                // 'style-loader!css-loader!less-loader'
             }, // use ! to chain loaders
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader"), 
+                // 'style-loader!css-loader'
             }, {
                 test: /\.(png|jpg)$/,
                 loader: 'url-loader?limit=8192&name=/[path][name].[ext]'
@@ -50,6 +54,9 @@ module.exports = {
         "jquery": "jQuery"
     },
     plugins: [
+        new ExtractTextPlugin("style.css", {
+            allChunks: true
+        }),
         new webpack.HotModuleReplacementPlugin(), //热替换模块
         new webpack.NoErrorsPlugin() //当新的更改报错时, 不生产新的代码
     ]
