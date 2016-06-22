@@ -3,6 +3,7 @@
 <head>
 	<title>ZEALER</title>
 	<link href="http://cdn.bootcss.com/normalize/4.1.1/normalize.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/build/style.css">
 	<meta charset="utf-8">
 </head>
 <body>
@@ -19,8 +20,17 @@
 			</div>
 		</div>
 	</div>
+	<div style='margin-top:100px' id='navigator'>
+		<button id='pageA'>PAGEA</button>
+		<button id='pageB'>PAGEB</button>
+		<button id='pageC'>PAGEC</button>
+	</div>
+	<div id='content' style='margin-top:200px;background:gray;height:100px;'>
+
+	</div>
 <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src='build/bundle.js'></script>
+<script src='/vendor/jquery.history.js'></script>
+<!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+<script type="text/javascript" src='/build/bundle.js'></script>
 </body>
 </html>
