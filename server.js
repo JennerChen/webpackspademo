@@ -21,7 +21,7 @@ new WebpackDevServer(webpack(config),{
 		// 	}
 		// },
 		'/page/*': {
-			target: '127.0.0.1:13777/',
+			target: '127.0.0.1:1377/',
 			secure: false,
 			bypass: function (req, res, proxyOptions) {
 				if (req.headers.accept.indexOf('html') !== -1) {

@@ -11,7 +11,12 @@ function changePage(){
     			$('#content').html(content);
     		});
     	}else if(currentState.title === 'pageB'){
-		    $('#content').html(require('./pageB.html'));
+    		var template = require('./content.handlebars');
+    		console.log(template);
+		    $('#content').html(template({
+		    	title: "My New Post", 
+  				body: "This is my first post!"
+		    }));
     	}else if(currentState.title === 'pageC'){
     		$('#content').html(require('./pageC.html'));
     	}else{

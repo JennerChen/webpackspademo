@@ -33,6 +33,9 @@ module.exports = {
                 test: [/\.html$/, /\.htm$/],
                 loader: 'html-loader'
             }, {
+                test: /\.handlebars$/, 
+                loader: 'handlebars-loader'//使用handlebar-loader,不直接使用handlebar
+            },{
                 test: [/\.json$/],
                 loader: 'json-loader'
             }, {
@@ -51,9 +54,15 @@ module.exports = {
         ]
     },
     externals: {
-        "jquery": "jQuery"
+        "jquery": "jQuery",
+        "underscore":"_"
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+        }),
         new ExtractTextPlugin("style.css", {
             allChunks: true
         }),
